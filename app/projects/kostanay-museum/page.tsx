@@ -56,13 +56,6 @@ export default function KostanayMuseumPage() {
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Костанайский музей</h1>
             <p className="text-2xl text-gray-400 mb-8">Виртуальный тур по историко-краеведческому музею</p>
-            <div className="aspect-video relative rounded-xl overflow-hidden mb-12">
-              <img
-                src="/projects/kostanay-museum.jpg"
-                alt="Kostanay Museum Virtual Tour"
-                className="object-cover w-full h-full"
-              />
-            </div>
           </motion.div>
         </div>
       </section>

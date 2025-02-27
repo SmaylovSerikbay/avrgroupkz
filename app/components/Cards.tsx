@@ -1,6 +1,5 @@
 'use client';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Project } from '../types';
 import { CubeElement, EyeElement } from './GeometricElements';
@@ -78,61 +77,32 @@ export const ServiceCard = ({ service, index }: ServiceCardProps) => {
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
   return (
-    <Link href={project.slug ? `/projects/${project.slug}` : '#'}>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
-        viewport={{ once: true, margin: "-50px" }}
-        className="group relative bg-black/50 rounded-lg overflow-hidden border border-white/10 hover:border-white/20 transition-colors"
-      >
-        <div className="relative aspect-video">
-          <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            priority={index < 2}
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-          
-          <div 
-            className="absolute top-4 right-4 w-12 h-12 bg-white/10 rounded-full flex items-center justify-center border border-white/20"
-          >
-            {project.service === 'mobile-development' ? (
-              <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
-            ) : project.service === 'web-development' ? (
-              <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-              </svg>
-            ) : (
-              <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-            )}
-          </div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: true }}
+      className="group relative bg-zinc-900/50 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden hover:border-white/20 transition-colors"
+    >
+      <Link href={`/projects/${project.slug}`} className="block p-6">
+        <div className="mb-4">
+          <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">
+            {project.title}
+          </h3>
+          <p className="text-gray-400 text-sm mb-2">{project.category}</p>
+          <p className="text-gray-300">{project.description}</p>
         </div>
         
-        <div className="relative p-6 z-10">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/40 -z-10" />
-          <div>
-            <p className="text-sm text-gray-400 mb-2 font-medium tracking-wider uppercase">{project.category}</p>
-            <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
-            <p className="text-gray-300 line-clamp-2">{project.description}</p>
-            
-            <div className="mt-4 flex items-center text-white/60">
-              <span className="text-sm">Подробнее</span>
-              <svg className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </div>
-          </div>
+        <div className="flex items-center text-sm text-gray-400">
+          <span className="flex items-center">
+            <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+            Подробнее
+          </span>
         </div>
-      </motion.div>
-    </Link>
+      </Link>
+    </motion.div>
   );
 }
 

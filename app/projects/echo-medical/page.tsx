@@ -57,15 +57,8 @@ export default function EchoMedicalPage() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Echo</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">PSMO24</h1>
             <p className="text-2xl text-gray-400 mb-8">Медицинский осмотр за 60 секунд</p>
-            <div className="aspect-video relative rounded-xl overflow-hidden mb-12">
-              <img
-                src="/projects/echo-medical.jpg"
-                alt="Echo Medical Device"
-                className="object-cover w-full h-full"
-              />
-            </div>
           </motion.div>
         </div>
       </section>
