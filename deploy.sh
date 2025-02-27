@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Переменные
-REMOTE_USER="ubuntu"
+REMOTE_USER="root"
 REMOTE_HOST="85.202.192.89"
-REMOTE_DIR="/var/www/avr-group"
-APP_NAME="avr-group"
+REMOTE_DIR="/var/www/avrgroup"
+APP_NAME="avrgroup"
 
 # Архивируем проект
 echo "Архивирование проекта..."
@@ -18,22 +18,21 @@ scp deploy.tar.gz $REMOTE_USER@$REMOTE_HOST:$REMOTE_DIR/
 echo "Установка и запуск на сервере..."
 ssh $REMOTE_USER@$REMOTE_HOST << EOF
   # Создаем директорию если её нет
-  sudo mkdir -p $REMOTE_DIR
-  sudo chown -R ubuntu:ubuntu $REMOTE_DIR
+  mkdir -p $REMOTE_DIR
   cd $REMOTE_DIR
 
   # Распаковываем архив
   tar -xzf deploy.tar.gz
 
   # Устанавливаем зависимости
-  pnpm install
+  npm install
 
   # Собираем проект
-  pnpm run build
+  npm run build
 
   # Устанавливаем PM2 если его нет
   if ! command -v pm2 &> /dev/null; then
-    sudo npm install -g pm2
+    npm install -g pm2
   fi
 
   # Перезапускаем приложение
