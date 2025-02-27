@@ -1,32 +1,44 @@
 import type { Metadata } from "next";
+import { Inter } from 'next/font/google';
 import { ContactWidgets } from "./components/ContactWidgets";
 import { aeroport } from './fonts';
 import "./globals.css";
 
+const inter = Inter({ subsets: ['latin', 'cyrillic'] })
+
 export const metadata: Metadata = {
-  title: "AVR Group - Разработка IT решений в Астане | Веб, Мобильные, VR/AR/MR приложения",
-  description: "Ведущая IT компания в Астане. ✓15 лет опыта ✓Более 100 проектов ✓Гарантия качества. Разработка сайтов, мобильных приложений, VR/AR/MR решений. Создаем инновационные цифровые продукты для бизнеса.",
+  title: "AVR Group - Ведущая компания по разработке VR/AR/MR, мобильных приложений и сайтов в Казахстане",
+  description: "Топовая IT компания в СНГ и Казахстане. ✓15 лет опыта ✓500+ успешных проектов ✓Инновационные VR/AR/MR решения ✓Профессиональная разработка мобильных приложений и сайтов ✓Международный опыт ✓Гарантия качества",
   keywords: [
+    // Казахстан
+    "разработка сайтов Казахстан",
+    "мобильные приложения Казахстан",
+    "VR AR разработка Казахстан",
+    "IT компания Казахстан",
+    "разработка приложений Казахстан",
+    // СНГ
+    "VR разработка СНГ",
+    "AR разработка СНГ",
+    "MR разработка СНГ",
+    "разработка приложений СНГ",
+    // Города
     "разработка сайтов Астана",
-    "создание сайтов",
-    "веб разработка",
-    "мобильные приложения",
-    "разработка приложений Астана",
-    "VR разработка",
-    "AR разработка",
-    "MR разработка",
-    "IT компания Астана",
-    "digital агентство",
-    "разработка корпоративных сайтов",
-    "создание интернет магазина",
-    "разработка веб приложений",
+    "разработка сайтов Алматы",
+    "мобильные приложения Астана",
+    "мобильные приложения Алматы",
+    // Специфика
+    "корпоративные сайты",
+    "интернет магазины",
+    "веб приложения",
     "мобильные приложения для бизнеса",
     "виртуальная реальность",
     "дополненная реальность",
     "смешанная реальность",
     "3D визуализация",
+    // Бренд
     "AVR Group",
-    "АВР Групп"
+    "АВР Групп",
+    "avr-group.kz"
   ].join(", "),
   robots: {
     index: true,
@@ -41,27 +53,29 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'verification_token',
+    yandex: 'verification_token',
   },
   alternates: {
-    canonical: 'https://avrgroup.kz',
+    canonical: 'https://avr-group.kz',
   },
   openGraph: {
-    title: "AVR Group - Ведущая IT компания в Астане",
-    description: "Профессиональная разработка сайтов, мобильных приложений и VR/AR/MR решений. Создаем инновационные цифровые продукты для развития вашего бизнеса.",
-    url: 'https://avrgroup.kz',
+    title: "AVR Group - Ведущая IT компания в СНГ и Казахстане",
+    description: "Профессиональная разработка VR/AR/MR решений, мобильных приложений и сайтов. 15 лет опыта, 500+ успешных проектов, международное качество.",
+    url: 'https://avr-group.kz',
     siteName: 'AVR Group',
     locale: 'ru_KZ',
     type: 'website',
     images: [
       {
-        url: 'https://avrgroup.kz/og-image.jpg',
+        url: 'https://avr-group.kz/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'AVR Group - IT решения для бизнеса',
+        alt: 'AVR Group - Инновационные IT решения в СНГ и Казахстане',
       }
     ],
-  }
-};
+  },
+  viewport: 'width=device-width, initial-scale=1',
+}
 
 export default function RootLayout({
   children,
@@ -69,7 +83,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru" className={`${aeroport.variable} scroll-smooth`}>
+    <html lang="ru" className={`${aeroport.variable} scroll-smooth ${inter.className}`}>
       <head>
         <link
           rel="preload"

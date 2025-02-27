@@ -1,0 +1,22 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Yandexbot
+User-agent: Yandexbot
+Allow: /
+Crawl-delay: 1
+
+# Host
+Host: https://avr-group.kz
+
+# Sitemaps
+Sitemap: https://avr-group.kz/sitemap.xml
