@@ -26,10 +26,10 @@ ssh $REMOTE_USER@$REMOTE_HOST << EOF
   tar -xzf deploy.tar.gz
 
   # Устанавливаем зависимости
-  npm install
+  pnpm install
 
   # Собираем проект
-  npm run build
+  pnpm run build
 
   # Устанавливаем PM2 если его нет
   if ! command -v pm2 &> /dev/null; then
