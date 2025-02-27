@@ -10,8 +10,6 @@ const nextConfig = {
     ],
     unoptimized: true
   },
-  siteUrl: 'https://avr-group.kz',
-  generateRobotsTxt: true,
 }
 
 module.exports = nextConfig 

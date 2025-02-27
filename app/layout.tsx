@@ -61,7 +61,6 @@ export const metadata: Metadata = {
   verification: {
     google: 'verification_token',
     yandex: 'verification_token',
-    'baidu-site-verification': 'verification_token',
   },
   alternates: {
     canonical: 'https://avr-group.kz',
