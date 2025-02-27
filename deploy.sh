@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Переменные
-REMOTE_USER="ubuntu"
+REMOTE_USER="root"
 REMOTE_HOST="85.202.192.89"
 REMOTE_DIR="/var/www/avrgroup"
 APP_NAME="avrgroup"
@@ -17,8 +17,6 @@ scp deploy.tar.gz $REMOTE_USER@$REMOTE_HOST:$REMOTE_DIR/
 # Выполняем команды на сервере
 echo "Установка и запуск на сервере..."
 ssh $REMOTE_USER@$REMOTE_HOST << EOF
-  # Переключаемся на root для выполнения команд
-  sudo -i << EOSUDO
   # Создаем директорию если её нет
   mkdir -p $REMOTE_DIR
   cd $REMOTE_DIR
@@ -46,7 +44,6 @@ ssh $REMOTE_USER@$REMOTE_HOST << EOF
 
   # Удаляем архив
   rm deploy.tar.gz
-EOSUDO
 EOF
 
 # Удаляем локальный архив
