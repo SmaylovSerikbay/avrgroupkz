@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Переменные
-REMOTE_USER="root"
+REMOTE_USER="ubuntu"
 REMOTE_HOST="85.202.192.89"
 REMOTE_DIR="/var/www/avrgroup"
 APP_NAME="avrgroup"
@@ -18,21 +18,30 @@ scp deploy.tar.gz $REMOTE_USER@$REMOTE_HOST:$REMOTE_DIR/
 echo "Установка и запуск на сервере..."
 ssh $REMOTE_USER@$REMOTE_HOST << EOF
   # Создаем директорию если её нет
-  mkdir -p $REMOTE_DIR
+  sudo mkdir -p $REMOTE_DIR
   cd $REMOTE_DIR
 
+  # Устанавливаем правильные права
+  sudo chown -R ubuntu:ubuntu .
+  
   # Распаковываем архив
   tar -xzf deploy.tar.gz
 
+  # Устанавливаем pnpm если его нет
+  if ! command -v pnpm &> /dev/null; then
+    curl -fsSL https://get.pnpm.io/install.sh | sudo bash -
+    source /usr/local/bin/pnpm-env
+  fi
+
   # Устанавливаем зависимости
-  npm install
+  pnpm install
 
   # Собираем проект
-  npm run build
+  pnpm build
 
   # Устанавливаем PM2 если его нет
   if ! command -v pm2 &> /dev/null; then
-    npm install -g pm2
+    sudo npm install -g pm2
   fi
 
   # Перезапускаем приложение
