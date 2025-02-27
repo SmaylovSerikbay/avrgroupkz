@@ -100,13 +100,6 @@ export default function RootLayout({
   return (
     <html lang="ru" className={`${aeroport.variable} scroll-smooth`}>
       <head>
-        <link
-          rel="preload"
-          href={aeroport.style.fontFamily}
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
       </head>
       <body className="font-aeroport antialiased">

@@ -18,7 +18,7 @@ export default {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontFamily: {
-        aeroport: ['var(--font-aeroport)'],
+        aeroport: ['var(--font-aeroport)', 'system-ui', 'arial'],
       },
     },
   },

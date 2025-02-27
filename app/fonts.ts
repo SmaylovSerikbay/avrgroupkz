@@ -18,5 +18,8 @@ export const aeroport = localFont({
       style: 'normal',
     }
   ],
-  variable: '--font-aeroport'
+  variable: '--font-aeroport',
+  display: 'swap',
+  preload: true,
+  fallback: ['system-ui', 'arial']
 }); 
