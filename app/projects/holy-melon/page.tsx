@@ -55,14 +55,7 @@ export default function HolyMelonPage() {
             className="max-w-4xl mx-auto text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Holy Melon</h1>
-            <p className="text-2xl text-gray-400 mb-8">Платформа управления контентом для сети ресторанов</p>
-            <div className="aspect-video relative rounded-xl overflow-hidden mb-12">
-              <img
-                src="/projects/holy-melon.jpg"
-                alt="Holy Melon Platform"
-                className="object-cover w-full h-full"
-              />
-            </div>
+            <p className="text-2xl text-gray-400 mb-8">Платформа управления контентом</p>
           </motion.div>
         </div>
       </section>

@@ -1,6 +1,5 @@
 'use client';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import { GeometricBackground } from '../../components/GeometricElements';
 import Header from '../../components/Header';
@@ -35,19 +34,9 @@ export default function ProjectPage() {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
-            <div className="mb-8">
+            <div className="mb-8 text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-4">{project.title}</h1>
               <p className="text-xl text-gray-400">{project.category}</p>
-            </div>
-
-            <div className="relative aspect-video mb-12 rounded-xl overflow-hidden">
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className="object-cover"
-                priority
-              />
             </div>
 
             <div className="prose prose-invert max-w-none">
