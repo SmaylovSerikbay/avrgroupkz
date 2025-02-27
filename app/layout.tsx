@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from 'next/font/google';
 import { ContactWidgets } from "./components/ContactWidgets";
 import { aeroport } from './fonts';
 import "./globals.css";
-
-const inter = Inter({ subsets: ['latin', 'cyrillic'] })
 
 export const metadata: Metadata = {
   title: "AVR Group - №1 в разработке VR/AR/MR, мобильных приложений и сайтов в Казахстане и СНГ",
@@ -101,7 +98,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru" className={`${aeroport.variable} scroll-smooth ${inter.className}`}>
+    <html lang="ru" className={`${aeroport.variable} scroll-smooth`}>
       <head>
         <link
           rel="preload"

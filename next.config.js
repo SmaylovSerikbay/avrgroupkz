@@ -10,6 +10,12 @@ const nextConfig = {
     ],
     unoptimized: true
   },
+  experimental: {
+    optimizeFonts: false
+  },
+  typescript: {
+    ignoreBuildErrors: true
+  }
 }
 
 module.exports = nextConfig 

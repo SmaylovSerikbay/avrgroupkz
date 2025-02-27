@@ -5,17 +5,17 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /static/
 
-# Google
+# Googlebot
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 1
 
-# Yandex
+# Yandexbot
 User-agent: Yandexbot
 Allow: /
 Crawl-delay: 1
 
-# Bing
+# bingbot
 User-agent: bingbot
 Allow: /
 Crawl-delay: 1
