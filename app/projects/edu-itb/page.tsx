@@ -56,13 +56,6 @@ export default function EduItbPage() {
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Білім Академиясы</h1>
             <p className="text-2xl text-gray-400 mb-8">Инновации, трансформация, трансляция</p>
-            <div className="aspect-video relative rounded-xl overflow-hidden mb-12">
-              <img
-                src="/projects/edu-itb.jpg"
-                alt="Білім Академиясы Platform"
-                className="object-cover w-full h-full"
-              />
-            </div>
           </motion.div>
         </div>
       </section>

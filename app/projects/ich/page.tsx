@@ -56,13 +56,6 @@ export default function IchPage() {
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">ICH.KZ</h1>
             <p className="text-2xl text-gray-400 mb-8">Портал нематериального культурного наследия</p>
-            <div className="aspect-video relative rounded-xl overflow-hidden mb-12">
-              <img
-                src="/projects/ich.jpg"
-                alt="ICH.KZ Portal"
-                className="object-cover w-full h-full"
-              />
-            </div>
           </motion.div>
         </div>
       </section>

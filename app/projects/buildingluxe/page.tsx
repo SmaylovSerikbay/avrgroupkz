@@ -56,13 +56,6 @@ export default function BuildingLuxePage() {
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">BuildingLuxe</h1>
             <p className="text-2xl text-gray-400 mb-8">Строительная компания</p>
-            <div className="aspect-video relative rounded-xl overflow-hidden mb-12">
-              <img
-                src="/projects/buildingluxe.jpg"
-                alt="BuildingLuxe Website"
-                className="object-cover w-full h-full"
-              />
-            </div>
           </motion.div>
         </div>
       </section>

@@ -56,13 +56,6 @@ export default function ArcheoPage() {
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Институт археологии</h1>
             <p className="text-2xl text-gray-400 mb-8">Корпоративный портал научного института</p>
-            <div className="aspect-video relative rounded-xl overflow-hidden mb-12">
-              <img
-                src="/projects/archeo.jpg"
-                alt="Институт археологии"
-                className="object-cover w-full h-full"
-              />
-            </div>
           </motion.div>
         </div>
       </section>
