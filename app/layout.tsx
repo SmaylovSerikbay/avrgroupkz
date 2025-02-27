@@ -1,7 +1,13 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { ContactWidgets } from "./components/ContactWidgets";
 import { aeroport } from './fonts';
 import "./globals.css";
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+};
 
 export const metadata: Metadata = {
   title: "AVR Group - №1 в разработке VR/AR/MR, мобильных приложений и сайтов в Казахстане и СНГ",
@@ -89,7 +95,6 @@ export const metadata: Metadata = {
     description: 'Ведущий разработчик VR/AR/MR решений, мобильных приложений и веб-платформ в СНГ и Казахстане',
     images: ['https://avr-group.kz/twitter-image.jpg'],
   },
-  viewport: 'width=device-width, initial-scale=1',
 }
 
 export default function RootLayout({
@@ -99,9 +104,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" className={`${aeroport.variable} scroll-smooth`}>
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-      </head>
       <body className="font-aeroport antialiased">
         {children}
         <ContactWidgets />
