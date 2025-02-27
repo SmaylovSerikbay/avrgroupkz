@@ -144,7 +144,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
-                className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-12"
+                className="grid grid-cols-3 gap-4 mt-12"
               >
                 {[
                   { number: '50+', label: 'Реализованных проектов' },
@@ -153,7 +153,7 @@ export default function Home() {
                 ].map((stat, index) => (
                   <div key={index} className="text-center">
                     <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.number}</div>
-                    <div className="text-gray-400 text-sm">{stat.label}</div>
+                    <div className="text-gray-400 text-sm whitespace-nowrap">{stat.label}</div>
                   </div>
                 ))}
               </motion.div>

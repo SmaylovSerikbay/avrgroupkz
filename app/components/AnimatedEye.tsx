@@ -37,7 +37,7 @@ export const AnimatedEye = () => {
   const CurrentIcon = icons[currentIconIndex].icon;
 
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full hidden md:block">
       <svg 
         viewBox="0 0 400 400" 
         className="w-full h-full"
