@@ -30,7 +30,7 @@ export const ContactWidgets = () => {
 
       {/* Кнопка WhatsApp */}
       <motion.a
-        href="https://wa.me/77085446945"
+        href="https://wa.me/77776875411"
         target="_blank"
         rel="noopener noreferrer"
         whileHover={{ scale: 1.1 }}
@@ -48,10 +48,10 @@ export const ContactWidgets = () => {
 
       {/* Кнопка Телефона */}
       <motion.a
-        href="tel:+77085446945"
+        href="tel:+77776875411"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        onClick={() => handleCopyClick('+77085446945')}
+        onClick={() => handleCopyClick('+77776875411')}
         className="flex items-center justify-center w-14 h-14 bg-blue-500 rounded-full shadow-lg hover:bg-blue-600 transition-colors"
       >
         <PhoneIcon className="w-6 h-6 text-white" />
