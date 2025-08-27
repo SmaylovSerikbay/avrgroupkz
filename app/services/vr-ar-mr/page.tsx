@@ -45,7 +45,7 @@ export default function VRARMRPage() {
                 className="flex-1 text-center md:text-left"
               >
                 <div className="inline-flex items-center px-4 py-2 bg-green-600/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">
-                  🚀 Инновационные технологии 2024
+                  🚀 Инновационные технологии 2025
                 </div>
                 <h1 className="text-4xl md:text-7xl font-bold mb-6">
                   VR/AR/MR разработка
@@ -453,7 +453,7 @@ export default function VRARMRPage() {
                   Получите бесплатную консультацию и прототип вашего VR/AR/MR проекта
                 </p>
                 <div className="inline-flex items-center px-4 py-2 bg-red-600/20 border border-red-500/30 rounded-full text-red-400 text-sm font-medium mb-6">
-                  ⏰ Ограниченное количество проектов на 2024 год
+                  ⏰ Ограниченное количество проектов на 2025 год
                 </div>
               </div>
               

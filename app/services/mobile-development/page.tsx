@@ -47,7 +47,7 @@ export default function MobileDevelopmentPage() {
                 className="flex-1 text-center md:text-left"
               >
                 <div className="inline-flex items-center px-4 py-2 bg-purple-600/20 border border-purple-500/30 rounded-full text-purple-400 text-sm font-medium mb-6">
-                  📱 Мобильные технологии 2024
+                  📱 Мобильные технологии 2025
                 </div>
                 <h1 className="text-4xl md:text-7xl font-bold mb-6">
                   Разработка мобильных приложений
@@ -404,7 +404,7 @@ export default function MobileDevelopmentPage() {
           primaryButtonUrl="https://wa.me/77776875411?text=Здравствуйте! Хочу обсудить разработку мобильного приложения с AVR Group"
           secondaryButtonText="Позвонить сейчас"
           secondaryButtonUrl="tel:+77776875411"
-          urgencyText="Ограниченное количество проектов на 2024 год"
+          urgencyText="Ограниченное количество проектов на 2025 год"
           className="bg-zinc-900/50"
         />
       </main>

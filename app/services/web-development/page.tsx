@@ -45,7 +45,7 @@ export default function WebDevelopmentPage() {
                 className="flex-1 text-center md:text-left"
               >
                 <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium mb-6">
-                  🌐 Современные веб-технологии 2024
+                  🌐 Современные веб-технологии 2025
                 </div>
                 <h1 className="text-4xl md:text-7xl font-bold mb-6">
                   Профессиональная веб-разработка
@@ -428,7 +428,7 @@ export default function WebDevelopmentPage() {
                   Получите бесплатную консультацию и прототип вашего веб-проекта
                 </p>
                 <div className="inline-flex items-center px-4 py-2 bg-red-600/20 border border-red-500/30 rounded-full text-red-400 text-sm font-medium mb-6">
-                  ⏰ Ограниченное количество проектов на 2024 год
+                  ⏰ Ограниченное количество проектов на 2025 год
                 </div>
               </div>
               
