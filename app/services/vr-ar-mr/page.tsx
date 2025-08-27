@@ -7,8 +7,6 @@ import Header from '../../components/Header';
 import { projects as allProjects } from '../../data/projects';
 import { Project } from '../../types';
 import SEOMeta from '../../components/SEOMeta';
-import FAQSection from '../../components/FAQSection';
-import CTASection from '../../components/CTASection';
 import Breadcrumbs from '../../components/Breadcrumbs';
 
 const vrProjects = allProjects.filter((project: Project) => project.service === 'vr-ar-mr');

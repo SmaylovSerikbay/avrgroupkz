@@ -245,7 +245,7 @@ export default function ARComebackPage() {
           >
             <h2 className="text-3xl font-bold mb-8">Уникальный AR опыт</h2>
             <div className="bg-white/5 rounded-lg p-8 backdrop-blur-sm">
-              <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                              <p className="text-lg text-gray-300 leading-relaxed mb-6">
                 Приложение создает неповторимый опыт погружения в историю, 
                 позволяя пользователям буквально шагнуть в прошлое. 
                 Через камеру смартфона они могут увидеть исторические здания, 
@@ -255,7 +255,7 @@ export default function ARComebackPage() {
               <p className="text-lg text-gray-300 leading-relaxed">
                 Технология дополненной реальности обеспечивает точное 
                 наложение исторических элементов на современные локации, 
-                создавая эффект "машины времени" в реальном времени.
+                создавая эффект &quot;машины времени&quot; в реальном времени.
               </p>
             </div>
           </motion.div>

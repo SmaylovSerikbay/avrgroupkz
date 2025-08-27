@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import Image from 'next/image';
 
 interface Recommendation {
   name: string;
@@ -83,7 +84,7 @@ export const RecommendationCard = ({ recommendation, index }: RecommendationCard
 
             {/* Изображение */}
             <div className="p-6">
-              <img
+              <Image
                 src={recommendation.originalImage}
                 alt={`Рекомендательное письмо от ${recommendation.name}`}
                 width={800}
