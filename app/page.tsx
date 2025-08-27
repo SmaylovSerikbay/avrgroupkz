@@ -147,16 +147,16 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
-                className="grid grid-cols-3 gap-4 mt-12"
+                className="grid grid-cols-3 gap-8 md:gap-4 mt-12"
               >
                 {[
                   { number: '50+', label: 'Реализованных проектов' },
                   { number: '50+', label: 'Довольных клиентов' },
                   { number: '8+', label: 'Лет опыта' },
                 ].map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.number}</div>
-                    <div className="text-gray-400 text-sm whitespace-nowrap">{stat.label}</div>
+                  <div key={index} className="text-center p-3 md:p-0">
+                    <div className="text-2xl md:text-3xl font-bold text-white mb-4 md:mb-2">{stat.number}</div>
+                    <div className="text-sm md:text-sm text-gray-400 leading-relaxed px-2">{stat.label}</div>
                   </div>
                 ))}
               </motion.div>
