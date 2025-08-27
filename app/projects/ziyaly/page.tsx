@@ -66,17 +66,17 @@ export default function ZiyalyPage() {
         <div className="container mx-auto relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl font-bold mb-12 text-center">Функциональные возможности</h2>
+            <h2 className="text-3xl font-bold mb-12 text-center">Возможности платформы</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
                   initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white/5 rounded-lg p-6 backdrop-blur-sm"
                 >
@@ -89,23 +89,23 @@ export default function ZiyalyPage() {
         </div>
       </section>
 
-      {/* Specifications Section */}
+      {/* Technologies Section */}
       <section className="py-20 px-4 bg-zinc-900/50 relative">
         <GeometricBackground />
         <div className="container mx-auto relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl font-bold mb-12 text-center">Технические характеристики</h2>
+            <h2 className="text-3xl font-bold mb-12 text-center">Используемые технологии</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {specs.map((spec, index) => (
                 <motion.div
                   key={spec.name}
                   initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex justify-between p-4 bg-white/5 rounded-lg backdrop-blur-sm"
                 >
@@ -124,7 +124,7 @@ export default function ZiyalyPage() {
         <div className="container mx-auto relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-3xl mx-auto text-center"
           >

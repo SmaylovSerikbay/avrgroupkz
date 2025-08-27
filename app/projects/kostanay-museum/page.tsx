@@ -66,7 +66,7 @@ export default function KostanayMuseumPage() {
         <div className="container mx-auto relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
@@ -76,7 +76,7 @@ export default function KostanayMuseumPage() {
                 <motion.div
                   key={feature.title}
                   initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-white/5 rounded-lg p-6 backdrop-blur-sm"
                 >
@@ -95,7 +95,7 @@ export default function KostanayMuseumPage() {
         <div className="container mx-auto relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
@@ -105,7 +105,7 @@ export default function KostanayMuseumPage() {
                 <motion.div
                   key={spec.name}
                   initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex justify-between p-4 bg-white/5 rounded-lg backdrop-blur-sm"
                 >
@@ -124,7 +124,7 @@ export default function KostanayMuseumPage() {
         <div className="container mx-auto relative">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-3xl mx-auto text-center"
           >

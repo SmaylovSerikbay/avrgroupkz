@@ -49,9 +49,8 @@ export const ServiceCard = ({ service, index }: ServiceCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      viewport={{ once: true, margin: "-50px" }}
       className="group relative p-6 bg-zinc-900/50 rounded-lg border border-white/10 hover:border-white/20 transition-colors"
     >
       <div className="relative">
@@ -79,9 +78,8 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      viewport={{ once: true }}
       className="group relative bg-zinc-900/50 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden hover:border-white/20 transition-colors"
     >
       <Link href={`/projects/${project.slug}`} className="block p-6">
@@ -110,7 +108,7 @@ export const ViewAllProjectsButton = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className="flex justify-center mt-12"
     >
@@ -143,9 +141,8 @@ export const TechnologyCard = ({ tech, index }: TechnologyCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: index * 0.1 }}
-      viewport={{ once: true }}
       className="p-6 bg-zinc-900/50 backdrop-blur-sm rounded-lg border border-white/10 hover:border-white/20 transition-all duration-300 group hover:-translate-y-1"
     >
       <div className="h-16 w-16 mb-4 mx-auto relative">
@@ -160,9 +157,8 @@ export const TestimonialCard = ({ testimonial, index }: TestimonialCardProps) =>
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: index * 0.2 }}
-      viewport={{ once: true }}
       className="bg-zinc-900/50 backdrop-blur-sm rounded-xl border border-white/10 p-8 relative group hover:border-white/20"
     >
       <div className="absolute -inset-1 bg-gradient-to-r from-white/5 to-transparent rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -190,14 +186,14 @@ export const TestimonialCard = ({ testimonial, index }: TestimonialCardProps) =>
         <motion.div 
           className="grid grid-cols-2 gap-4 mb-8"
           initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
           <div className="bg-white/5 backdrop-blur-sm rounded-lg p-4 relative overflow-hidden group">
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 to-transparent"
               initial={{ x: '-100%' }}
-              whileInView={{ x: 0 }}
+              animate={{ x: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
             />
             <p className="text-3xl font-bold text-white mb-1">+{40 + index * 15}%</p>
@@ -207,7 +203,7 @@ export const TestimonialCard = ({ testimonial, index }: TestimonialCardProps) =>
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-transparent"
               initial={{ x: '-100%' }}
-              whileInView={{ x: 0 }}
+              animate={{ x: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
             />
             <p className="text-3xl font-bold text-white mb-1">{8 + index}x</p>
@@ -219,7 +215,7 @@ export const TestimonialCard = ({ testimonial, index }: TestimonialCardProps) =>
         <div className="relative">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
             className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-white/20 to-transparent"
           />
@@ -229,7 +225,7 @@ export const TestimonialCard = ({ testimonial, index }: TestimonialCardProps) =>
         {/* Информация о клиенте */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
           className="flex items-center gap-4 mt-6 pl-6"
         >

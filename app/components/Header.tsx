@@ -13,6 +13,7 @@ const menuItems = [
     ]
   },
   { name: 'Проекты', href: '/projects' },
+  { name: 'Рекомендации', href: '/recommendations' },
   { name: 'Контакты', href: '#contact' },
 ];
 
