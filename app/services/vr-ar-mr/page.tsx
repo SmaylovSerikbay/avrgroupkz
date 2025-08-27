@@ -34,7 +34,7 @@ export default function VRARMRPage() {
         />
         
         {/* Hero Section - Более продающий */}
-        <section className="pt-32 pb-16 px-4 relative overflow-hidden">
+        <section className="pt-20 md:pt-32 pb-16 px-4 relative overflow-hidden">
           <GeometricBackground />
           <div className="container mx-auto relative">
             <div className="flex flex-col md:flex-row items-center justify-between gap-12">
@@ -44,10 +44,10 @@ export default function VRARMRPage() {
                 transition={{ duration: 0.8 }}
                 className="flex-1 text-center md:text-left"
               >
-                <div className="inline-flex items-center px-4 py-2 bg-green-600/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">
+                <div className="inline-flex items-center px-4 py-2 bg-green-600/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-4 md:mb-6">
                   🚀 Инновационные технологии 2025
                 </div>
-                <h1 className="text-4xl md:text-7xl font-bold mb-6">
+                <h1 className="text-4xl md:text-7xl font-bold mb-4 md:mb-6">
                   VR/AR/MR разработка
                 </h1>
                 <p className="text-gray-300 text-xl mb-8 max-w-3xl mx-auto">
