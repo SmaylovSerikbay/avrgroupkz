@@ -1,0 +1,35 @@
+# Команды для исправления сервера
+# Выполните эти команды на сервере после подключения через SSH
+
+# 1. Создать бэкап /etc/profile
+sudo cp /etc/profile /etc/profile.backup.$(date +%Y%m%d_%H%M%S)
+
+# 2. Просмотреть строку 33 в /etc/profile
+sudo sed -n '33p' /etc/profile
+
+# 3. Удалить вредоносный код из /etc/profile (удалить строки с .update)
+sudo sed -i '/\/usr\/bin\/\.update/d' /etc/profile
+
+# 4. Удалить вредоносный файл
+sudo rm -f /usr/bin/.update
+
+# 5. Убить все процессы .update
+sudo pkill -9 -f "/usr/bin/.update"
+sudo pkill -9 -f "\.update"
+
+# 6. Проверить crontab
+crontab -l | grep -v ".update" | crontab -
+sudo crontab -l | grep -v ".update" | sudo crontab -
+
+# 7. Проверить .bashrc и .bash_profile
+sed -i '/\/usr\/bin\/\.update/d' ~/.bashrc
+sed -i '/\/usr\/bin\/\.update/d' ~/.bash_profile
+sudo sed -i '/\/usr\/bin\/\.update/d' /root/.bashrc
+sudo sed -i '/\/usr\/bin\/\.update/d' /root/.bash_profile
+
+# 8. Проверить результат
+cat /etc/profile | grep -n "update"
+
+# 9. Перезагрузить сервер (опционально, но рекомендуется)
+# sudo reboot
+
