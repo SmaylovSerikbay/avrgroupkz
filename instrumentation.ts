@@ -19,7 +19,8 @@ export async function register() {
       console.error('[instrumentation] Подсказка: код пишет в системные каталоги. Используйте путь внутри проекта, например ./var/lrt или process.cwd() + "/var/lrt".');
     }
 
-    process.exit(1);
+    // Не выключаем процесс — падает только запрос, сайт продолжает работать
+    // process.exit(1);
   });
 
   process.on('unhandledRejection', (reason: unknown) => {
